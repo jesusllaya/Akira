@@ -10,7 +10,7 @@ import { FormControl, FormGroup, FormBuilder, Validators, FormArray } from '@ang
 export class NewProjectComponent implements OnInit {
 
   constructor(private fb: FormBuilder) { }
-
+  
   projectForm = new FormGroup({
     nameProject: new FormControl(''),
     description: new FormControl(''),
