@@ -14,6 +14,7 @@ import { NewClientComponent } from './components/new-client/new-client.component
 import { NewTaskComponent } from './components/new-task/new-task.component';
 import { TableClientComponent } from './components/table-client/table-client.component';
 import { TableTaskComponent } from './components/table-task/table-task.component';
+import { PlannedTableProjectsComponent } from './components/planned-table-projects/planned-table-projects.component';
 
 
 
@@ -26,7 +27,8 @@ import { TableTaskComponent } from './components/table-task/table-task.component
     NewClientComponent,
     NewTaskComponent,
     TableClientComponent,
-    TableTaskComponent
+    TableTaskComponent,
+    PlannedTableProjectsComponent,
   ],
   imports: [
     BrowserModule,

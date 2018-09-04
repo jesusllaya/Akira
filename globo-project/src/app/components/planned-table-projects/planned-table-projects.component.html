@@ -1,0 +1,91 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<h1>Proyectos Planeados</h1>
+<br>
+<div class="mat-elevation-z8">
+  <table mat-table #table [dataSource]="dataSource" matSort aria-label="Elements">
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+      <td mat-cell *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="nameProject">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre</th>
+      <td mat-cell *matCellDef="let row">{{row.nameProject}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Descripcion</th>
+      <td mat-cell *matCellDef="let row">{{row.description}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="typeProject">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Tipo</th>
+      <td mat-cell *matCellDef="let row">{{row.typeProject}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="client">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Cliente</th>
+      <td mat-cell *matCellDef="let row">{{row.client}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="lider">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Lider</th>
+      <td mat-cell *matCellDef="let row">{{row.lider}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="dateEstimateInitial">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha Est. Inicio</th>
+      <td mat-cell *matCellDef="let row">{{row.dateEstimateInitial}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="dateEstimateFin">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha Est. de Fin</th>
+      <td mat-cell *matCellDef="let row">{{row.dateEstimateFin}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="dateRealInitial">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha Real de Inicio</th>
+      <td mat-cell *matCellDef="let row">{{row.dateRealInitial}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="dateRealFin">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha Real de Fin</th>
+      <td mat-cell *matCellDef="let row">{{row.dateRealFin}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="presupuesto">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Presupuesto</th>
+      <td mat-cell *matCellDef="let row">{{row.presupuesto}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="city">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Ciudad</th>
+      <td mat-cell *matCellDef="let row">{{row.city}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="provincia">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Provincia</th>
+      <td mat-cell *matCellDef="let row">{{row.provincia}}</td>
+    </ng-container>
+
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator
+    [length]="dataSource.data.length"
+    [pageIndex]="0"
+    [pageSize]="50"
+    [pageSizeOptions]="[25, 50, 100, 250]">
+  </mat-paginator>
+</div>
